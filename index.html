@@ -84,16 +84,15 @@
       max-width: 520px;
       height: 340px;
       margin-left: 48px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
-      background: #232a34;
+      /* Removed border, box-shadow, background, and overflow */
     }
-    .hero-image img {
+    .hero-image img,
+    .section-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      border-radius: 16px;
     }
     .section {
       display: flex;
@@ -103,7 +102,7 @@
       padding: 64px 8vw;
       gap: 48px;
       background: #232a34;
-      border-radius: 18px;
+      /* Removed border-radius */
       margin: 32px auto;
       max-width: 1200px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -121,16 +120,10 @@
       min-width: 320px;
       max-width: 480px;
       height: 260px;
-      border-radius: 14px;
+      /* Removed border-radius */
       overflow: hidden;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12);
       background: #181c24;
-    }
-    .section-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
     }
     h2 {
       background: linear-gradient(90deg, #00e6b8 0%, #009e8e 100%);
@@ -165,7 +158,7 @@
       overflow: hidden;
       padding: 32px 0 18px 0;
       font-size: 1.05rem;
-      border-radius: 0 0 18px 18px;
+      /* Removed border-radius */
     }
   </style>
 </head>
