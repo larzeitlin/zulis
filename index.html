@@ -18,18 +18,20 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      align-items: center;
     }
     .hero {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 80px 8vw 40px 8vw;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding: 80px 8vw 40px 8vw;
-      /* Removed background gradient */
       min-height: 60vh;
-      max-width: 1200px;
       position: relative;
-      margin: 0 auto; /* Center the hero section horizontally */
     }
     .hero-content {
       max-width: 520px;
@@ -97,17 +99,16 @@
       border-radius: 16px;
     }
     .section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 32px auto;
+      box-sizing: border-box;
+      padding: 64px 8vw;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding: 64px 8vw;
       gap: 48px;
-      
-      /* Removed border-radius */
-      margin: 32px auto;
-      max-width: 1200px;
-      margin-top: 32px;
     }
     .section-content {
       flex: 1;
@@ -141,15 +142,32 @@
       color: initial !important;
     }
     @media (max-width: 900px) {
-      .hero, .section { flex-direction: column; padding: 48px 4vw; }
+      .hero, .section {
+        flex-direction: column;
+        padding: 32px 4vw 24px 4vw;
+        width: 100%;
+        max-width: 1200px;
+        box-sizing: border-box;
+      }
+      .hero {
+        min-height: unset;
+        margin-bottom: 0;
+      }
       .hero-image, .section-image { margin-left: 0; margin-top: 32px; height: 220px; }
       .section { gap: 24px; }
+      .section-production { flex-direction: column; }
     }
     @media (max-width: 700px) {
       .logo { font-size: 2rem; }
       .tagline { font-size: 1.05rem; }
       .specialty { min-width: 120px; padding: 10px 12px; font-size: 0.95em; }
-      .section { padding: 32px 2vw; }
+      .hero, .section {
+        padding: 20px 2vw 12px 2vw;
+      }
+      .hero {
+        min-height: unset;
+        margin-bottom: 0;
+      }
     }
     .footer {
       color: #aee7de;
@@ -175,40 +193,36 @@
           <a href="mailto:luke@lzeitlin.xyz">Let's start a conversation</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Earth Observation" />
-      </div>
+      <!-- Removed hero-image -->
     </section>
-    <hr style="border: none; border-top: 2px solid #3ad1b8; margin: 0 8vw; opacity: 0.35;">
     <section class="section">
       <div class="section-content">
         <h2>Proven Success</h2>
-        Delivering interactive geospatial data systems, high-performance real-time analytics, data processing pipelines, and automated alerting for environmental organisations.<br><br>
+        Delivering interactive geospatial data systems, high-performance real-time analytics, data processing pipelines, and automated alerting for environmental organisations.
       </div>
       <div class="section-image">
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Data Science" />
       </div>
     </section>
-    <hr style="border: none; border-top: 2px solid #3ad1b8; margin: 0 8vw; opacity: 0.35;">
-    <section class="section">
+    <section class="section section-production">
+      <div class="section-content">
+        <h2>From Proof-of-Concept to Production</h2>
+        From first sketch to a working system, we want to help you bring your vision to life.
+        <strong>Let's build for impact, together.</strong>
+      </div>
       <div class="section-image">
         <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Functional Programming" />
       </div>
-      <div class="section-content">
-        <h2>From Proof-of-Concept to Production</h2>
-        From first sketch to a working system, we want to help you bring your vision to life.<br><br>
-        <strong>Let's build for impact, together.</strong>
-      </div>
     </section>
-    <hr style="border: none; border-top: 2px solid #3ad1b8; margin: 0 8vw; opacity: 0.35;">
     <section class="section">
       <div class="section-content">
         <h2>What Makes Us Different</h2>
-        <ul>
-          <li><strong>Modern Tech Stack:</strong> We use functional programming methodologies to build systems that are robust, maintainable, and easy to evolve.</li>
-          <li><strong>Mission Alignment:</strong> Our experience working with environmental organisations means we understand your goals and share your motivation for positive impact.</li>
-          <li><strong>Selective Partnerships:</strong> We choose our customers carefully and invest in strong, long-term relationships to ensure mutual success and trust.</li>
-        </ul>
+        <h3>Modern Tech Stack</h3>
+        <p>We use functional programming methodologies to build systems that are robust, maintainable, and easy to evolve.</p>
+        <h3>Mission Alignment</h3>
+        <p>Our experience working with environmental organisations means we understand your goals and share your motivation for positive impact.</p>
+        <h3>Selective Partnerships</h3>
+        <p>We choose our customers carefully and invest in strong, long-term relationships to ensure mutual success and trust.</p>
       </div>
       <div class="section-image">
         <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Collaboration and Innovation" />
