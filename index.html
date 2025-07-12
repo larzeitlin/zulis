@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zulis | Software Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #181c24;
+      margin: 0;
+      color: #b2e9e6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 8vw 40px 8vw;
+      /* Removed background gradient */
+      min-height: 60vh;
+      position: relative;
+    }
+    .hero-content {
+      max-width: 520px;
+      z-index: 2;
+    }
+    .logo {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #00e6b8;
+      letter-spacing: 2px;
+      margin-bottom: 0.7em;
+      text-shadow: 0 2px 12px #003c3c44;
+      background: linear-gradient(90deg, #00e6b8 0%, #009e8e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .tagline {
+      font-size: 1.35rem;
+      color: #b2e9e6;
+      margin-bottom: 2em;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-align: left;
+      line-height: 1.4;
+    }
+    .cta {
+      margin-top: 2.2em;
+    }
+    .cta a {
+      display: inline-block;
+      background: linear-gradient(90deg, #00e6b8 0%, #009e8e 100%);
+      color: #181c24;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 15px 38px;
+      border-radius: 10px;
+      font-size: 1.13rem;
+      box-shadow: 0 2px 12px #00e6b822;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.5px;
+    }
+    .cta a:hover {
+      background: linear-gradient(90deg, #009e8e 0%, #00e6b8 100%);
+      color: #e3eaf2;
+      box-shadow: 0 6px 24px #00e6b844;
+    }
+    .hero-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 320px;
+      max-width: 520px;
+      height: 340px;
+      margin-left: 48px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      background: #232a34;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 64px 8vw;
+      gap: 48px;
+      background: #232a34;
+      border-radius: 18px;
+      margin: 32px auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      margin-top: 32px;
+    }
+    .section-content {
+      flex: 1;
+      color: #e3f9f6;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+    }
+    .section-image {
+      flex: 1;
+      min-width: 320px;
+      max-width: 480px;
+      height: 260px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      background: #181c24;
+    }
+    .section-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    h2 {
+      background: linear-gradient(90deg, #00e6b8 0%, #009e8e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    h2 span {
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      -webkit-text-fill-color: initial !important;
+      background-clip: initial !important;
+      color: initial !important;
+    }
+    @media (max-width: 900px) {
+      .hero, .section { flex-direction: column; padding: 48px 4vw; }
+      .hero-image, .section-image { margin-left: 0; margin-top: 32px; height: 220px; }
+      .section { gap: 24px; }
+    }
+    @media (max-width: 700px) {
+      .logo { font-size: 2rem; }
+      .tagline { font-size: 1.05rem; }
+      .specialty { min-width: 120px; padding: 10px 12px; font-size: 0.95em; }
+      .section { padding: 32px 2vw; }
+    }
+    .footer {
+      color: #aee7de;
+      background: #14171d;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 32px 0 18px 0;
+      font-size: 1.05rem;
+      border-radius: 0 0 18px 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="logo">zulis.</div>
+        <div class="tagline">
+          Sustainable solutions for mission-driven environmental organisations.
+        </div>
+        <div class="cta">
+          <a href="mailto:contact@zeitlin.industries">Let's start a conversation</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Earth Observation" />
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-content">
+        <h2>Proven Success</h2>
+        Delivering interactive geospatial data systems, high-performance real-time analytics, data processing pipelines, and automated alerting for environmental organisations.<br><br>
+      </div>
+      <div class="section-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Data Science" />
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-image">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Functional Programming" />
+      </div>
+      <div class="section-content">
+        <h2>From Proof-of-Concept to Production</h2>
+        From first sketch to a working system, we want to help you bring your mission to life.<br><br>
+        <strong>Let's build for impact, together.</strong>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-content">
+        <h2>What Makes Us Different</h2>
+        <ul>
+          <li><strong>Modern Tech Stack:</strong> We use functional programming methodolgies to build systems that are robust, maintainable, and easy to evolve.</li>
+          <li><strong>Mission Alignment:</strong> Our experience working with environmental organisations means we understand your goals and share your motivation for positive impact.</li>
+          <li><strong>Selective Partnerships:</strong> We choose our customers carefully and invest in strong, long-term relationships to ensure mutual success and trust.</li>
+        </ul>
+      </div>
+      <div class="section-image">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Collaboration and Innovation" />
+      </div>
+    </section>
+  </div>
+</body>
+</html>
